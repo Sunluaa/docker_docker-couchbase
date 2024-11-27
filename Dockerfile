@@ -1,8 +1,7 @@
-# Используем официальный образ Couchbase
-FROM couchbase:community-7.2.3
+FROM couchbase:latest
 
-# Открываем стандартные порты Couchbase
-EXPOSE 8091 8092 8093 8094 11210
+EXPOSE 8091-8094 11210 11211
 
-# Устанавливаем команду запуска
+WORKDIR /opt/couchbase
+
 CMD ["couchbase-server"]
